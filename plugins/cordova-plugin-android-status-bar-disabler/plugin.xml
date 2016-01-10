@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-android-status-bar-disabler"
+        version="0.1.0">
+
+  <name>Status Bar Disabler</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="SBD">
+        <param name="android-package" value="fr.omegasolutions.plugin.Sbd"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/CustomViewGroup.java" target-dir="src/fr/omegasolutions/plugin/"/>
+    <source-file src="src/android/Sbd.java" target-dir="src/fr/omegasolutions/plugin/"/>
+  </platform>
+
+</plugin>
